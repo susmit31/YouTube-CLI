@@ -19,6 +19,11 @@ item_titles = [i['snippet']['title'] for i in res_items]
 for i in range(len(res_items)):
     print(f"[{i+1}] {item_titles[i]}")
 
-choice = int(input("Please enter a choice: "))-1
+choice = input("Please enter a choice: ")
+if choice=='q':
+    exit()
+else:
+    choice = int(choice)-1
+    
 vid_link = f"https://youtube.com/watch?v={item_id[choice]}" 
 os.system(f"youtube-dl -o - {vid_link} | mpv -")
