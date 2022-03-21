@@ -8,7 +8,7 @@ however, there's also a NodeJS programme that is independent of
 the API, which runs a  headless Chromium browser to fetch video data. 
 You can use this one without an API key. 
 
-# Requirements
+# Dependencies
 The script requires that you have the following installed in your
  system.
 - *youtube-dl*: downloads YouTube videos.
