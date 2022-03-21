@@ -3,7 +3,6 @@ const {execSync} = require('child_process');
 const readline = require('readline');
 
 let inputs = process.argv.slice(2);
-let loop = parseInt(inputs.pop());
 let query = inputs.join(" ");
 
 (async (squery, reader)=>{
@@ -33,11 +32,13 @@ let query = inputs.join(" ");
 		output: process.stdout
 	})
 
-	readline.question("Please pick a video to play. ", num => {
-		let command = `youtube-dl -o - "${results[num-1][1]}" | mpv --title="${results[num-1][0]}"`;
-		if (loop > 1) command += ` --loop-file=${loop-1} -`;
-		else command +=  ` -`;
-		execSync(command);
-		process.exit();
+	readline.question("Please pick a video to play: ", num => {
+		readline.question("Repeat? (Enter the number of times the video should be repeated): ", loop=>{
+			let command = `youtube-dl -o - "${results[num-1][1]}" | mpv --title="${results[num-1][0]}"`;
+			if (loop > 1) command += ` --loop-file=${loop-1} -`;
+			else command +=  ` -`;
+			execSync(command);
+			process.exit();
+		})
 	})
-})(query, readline, loop);
+})(query, readline);
