@@ -13,6 +13,7 @@ The script requires that you have the following installed in your
  system.
 - *youtube-dl*: downloads YouTube videos.
 - *mpv*: the video player we use to play the video.
+
 Use your distro's package manager to fetch these.
 For example, on Ubuntu and Debian based systems,
  : `sudo apt-get install youtube-dl mpv`.
