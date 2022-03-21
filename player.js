@@ -35,7 +35,7 @@ let query = inputs.join(" ");
 
 	readline.question("Please pick a video to play. ", num => {
 		let command = `youtube-dl -o - "${results[num-1][1]}" | mpv --title="${results[num-1][0]}"`;
-		if (loop > 1) command += ` --loop-file=${loop} -`;
+		if (loop > 1) command += ` --loop-file=${loop-1} -`;
 		else command +=  ` -`;
 		execSync(command);
 		process.exit();
