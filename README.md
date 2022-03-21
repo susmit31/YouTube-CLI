@@ -16,5 +16,5 @@ The script requires that you have the following installed in your
 
 Use your distro's package manager to fetch these.
 For example, on Ubuntu and Debian based systems,
- : `sudo apt-get install youtube-dl mpv`.
+run `sudo apt-get install youtube-dl mpv`.
  
