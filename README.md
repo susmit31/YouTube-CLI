@@ -20,7 +20,9 @@ run `sudo apt-get install youtube-dl mpv`.
 
 # Usage
 `node yt-cli.js $QUERY`
+
 After enteing this, you'll be presented with the top 24 search results.
  Just enter the number of the video you want to watch and mention how 
  many times it should be repeated, and you're done.
+
 ![yt-cli ss](https://raw.githubusercontent.com/susmit31/YouTube-CLI/master/ss.png)
