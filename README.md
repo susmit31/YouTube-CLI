@@ -13,16 +13,20 @@ The script requires that you have the following installed in your
  system.
 - *youtube-dl*: downloads YouTube videos.
 - *mpv*: the video player we use to play the video.
-
 Use your distro's package manager to fetch these.
 For example, on Ubuntu and Debian based systems,
 run `sudo apt-get install youtube-dl mpv`.
 
+The NodeJS script depends on the *puppeteer* library for accessing a 
+headless Google Chrome. Run `npm install` in the project directory
+for installing it.
+
 # Usage
 `node yt-cli.js $QUERY`
 
-After entering this, you'll be presented with the top 24 search results.
- Just enter the number of the video you want to watch and mention how 
- many times it should be repeated, and you're done.
+After entering this, you'll be presented with around 24 of 
+the top search results. Just enter the number of the video 
+you want to watch and mention how  many times it should be
+ repeated, and you're done.
 
 ![yt-cli ss](https://raw.githubusercontent.com/susmit31/YouTube-CLI/master/ss.png)
