@@ -35,7 +35,7 @@ let query = inputs.join(" ");
 	readline.question("Please pick a video to play: ", num => {
 		readline.question("Repeat? (Enter the number of times the video should be repeated): ", loop=>{
 			let command = `youtube-dl -o - "${results[num-1][1]}" | mpv --title="${results[num-1][0]}"`;
-			if (loop > 1) command += ` --loop-file=${loop-1} -`;
+			if (loop > 1) command += ` --loop-file=${loop} -`;
 			else command +=  ` -`;
 			execSync(command);
 			process.exit();
