@@ -13,13 +13,15 @@ The script requires that you have the following installed in your
  system.
 - *youtube-dl*: downloads YouTube videos.
 - *mpv*: the video player we use to play the video.
-Use your distro's package manager to fetch these.
-For example, on Ubuntu and Debian based systems,
-run `sudo apt-get install youtube-dl mpv`.
+These are listed in the file `deps.txt`. Use your distro's package 
+manager to fetch these. For example, on Ubuntu and Debian based systems,
+run `sudo apt install $(cat deps.txt)`.
 
 The NodeJS script depends on the *puppeteer* library for accessing a 
 headless Google Chrome. Run `npm install` in the project directory
 for installing it.
+
+![installation-ss](https://raw.githubusercontent.com/susmit31/YouTube-CLI/master/ss-install.png)
 
 # Usage
 `node yt-cli.js $QUERY`
